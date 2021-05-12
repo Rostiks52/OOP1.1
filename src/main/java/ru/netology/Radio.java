@@ -49,9 +49,10 @@ public class Radio {
         currentVolume++;
     }
     public void decreaseVolume() {
-        if (currentVolume ==minVolume) {
+        if (currentVolume == minVolume) {
             return;
         }
         currentVolume--;
     }
+
 }

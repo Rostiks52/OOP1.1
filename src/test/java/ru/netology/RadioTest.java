@@ -100,7 +100,6 @@ class RadioTest {
     @Test
     void shouldDecreaseVolumeOutOfRange () {
         Radio radio = new Radio();
-        radio.setCurrentVolume(-2);
         radio.decreaseVolume();
         assertEquals(0, radio.getCurrentVolume());
     }
