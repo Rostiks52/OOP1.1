@@ -3,11 +3,24 @@ package ru.netology;
 public class Radio {
 
     private int minChannel = 0;
-    private int maxChannel = 9;
+    private int maxChannel = 10;
     private int currentChannel;
     private int minVolume = 0;
-    private int maxVolume = 10;
+    private int maxVolume = 100;
     private int currentVolume;
+
+    public Radio() {
+    }
+
+    public Radio(int minChannel,
+                 int maxChannel,
+                 int minVolume,
+                 int maxVolume) {
+        this.minChannel = 0;
+        this.maxChannel = 10;
+        this.minVolume = 0;
+        this.maxVolume = 100;
+    }
 
     public int getCurrentChannel() {
         return currentChannel;
