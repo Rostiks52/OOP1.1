@@ -9,8 +9,8 @@ class RadioTest {
     @Test
     void shouldSelectChannelWithinRange() {
         Radio radio = new Radio();
-        radio.setCurrentChannel(10);
-        assertEquals(10, radio.getCurrentChannel());
+        radio.setCurrentChannel(5);
+        assertEquals(5, radio.getCurrentChannel());
     }
 
     @Test
@@ -38,7 +38,7 @@ class RadioTest {
     @Test
     void shouldSwitchNextChannelAboveMaxChannel() {
         Radio radio = new Radio();
-        radio.setCurrentChannel(10);
+        radio.setCurrentChannel(9);
         radio.nextChannel();
         assertEquals(0, radio.getCurrentChannel());
     }
@@ -56,7 +56,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentChannel(0);
         radio.previousChannel();
-        assertEquals(10, radio.getCurrentChannel());
+        assertEquals(9, radio.getCurrentChannel());
     }
 
 
