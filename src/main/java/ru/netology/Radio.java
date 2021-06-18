@@ -8,18 +8,9 @@ public class Radio {
     private int maxVolume = 100;
     private int currentVolume;
 
-    public Radio(int minChannel,
-                 int maxChannel,
-                 int currentChannel,
-                 int minVolume,
-                 int maxVolume,
-                 int currentVolume) {
-        this.minChannel = 0;
-        this.maxChannel = 9;
-        this.currentChannel = currentChannel;
-        this.minVolume = 0;
+    public Radio(int maxChannel, int maxVolume) {
+        this.maxChannel = maxChannel;
         this.maxVolume = maxVolume;
-        this.currentVolume = 100;
     }
 
     public Radio() {
