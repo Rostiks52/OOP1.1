@@ -90,6 +90,13 @@ class RadioTest {
         radio.decreaseVolume();
         assertEquals(0, radio.getCurrentVolume());
     }
+    @Test
+    void shouldCountChannels () {
+        Radio radio = new Radio();
+        radio.getMaxChannel();
+        assertEquals(9, radio.getMaxChannel());
+    }
+
 }
 
 
