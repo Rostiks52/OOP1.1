@@ -9,8 +9,8 @@ class RadioTest {
     @Test
     void shouldSelectChannelWithinRange() {
         Radio radio = new Radio();
-        radio.setCurrentChannel(4);
-        assertEquals(4, radio.getCurrentChannel());
+        radio.setCurrentChannel(5);
+        assertEquals(5, radio.getCurrentChannel());
     }
 
     @Test
@@ -59,19 +59,6 @@ class RadioTest {
         assertEquals(9, radio.getCurrentChannel());
     }
 
-    @Test
-    void shouldSetVolumeWithinLevel () {
-        Radio radio = new Radio();
-        radio.setCurrentVolume(4);
-        assertEquals(4, radio.getCurrentVolume());
-    }
-
-    @Test
-    void shouldSetVolumeOverRange () {
-        Radio radio = new Radio();
-        radio.setCurrentVolume(123);
-        assertEquals(10, radio.getCurrentVolume());
-    }
 
     @Test
     void shouldIncreaseVolumeWithinRange () {
@@ -86,7 +73,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentVolume(321);
         radio.increaseVolume();
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
@@ -103,6 +90,13 @@ class RadioTest {
         radio.decreaseVolume();
         assertEquals(0, radio.getCurrentVolume());
     }
+    @Test
+    void shouldSetMaxChannel () {
+        Radio radio = new Radio();
+        radio.getMaxChannel();
+        assertEquals(9, radio.getMaxChannel());
+    }
+
 }
 
 
