@@ -91,7 +91,7 @@ class RadioTest {
         assertEquals(0, radio.getCurrentVolume());
     }
     @Test
-    void shouldCountChannels () {
+    void shouldSetMaxChannel () {
         Radio radio = new Radio();
         radio.getMaxChannel();
         assertEquals(9, radio.getMaxChannel());
